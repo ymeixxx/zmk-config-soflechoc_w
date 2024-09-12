@@ -25,7 +25,7 @@
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                               &kp Y  &kp U     &kp I     &kp O    &kp P    &kp EQUAL
 &kp ESC   &kp A  &kp S    &kp D    &kp F     &kp G                               &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE &ext_power EP_TOG &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                 &kp LGUI &kp LALT &mt LCTRL BSLH &lt 1 BSPC  &kp DEL    &kp RET    &lt 2 SPACE  &mt RCTRL LBKT &kp RALT  &kp RGUI
+                 &kp LGUI &mt LALT KP_MULTIPLY &mt LCTRL BSLH &lt 1 BSPC  &kp DEL    &kp RET    &lt 2 SPACE  &mt RCTRL LBKT &kp RALT  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -56,12 +56,12 @@
 // |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
 // |     | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
 // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//              |      |       |       |      |      |  |      |      |      |       |      |
+//              |      |       |       |      |      |  |      |      | HOME |  END  |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &trans    &trans   &trans    &trans  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &trans    &trans   &trans    &trans  &trans
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &kp HOME  &kp END  &trans    &trans  &trans
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
 
