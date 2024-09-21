@@ -10,11 +10,13 @@
 
 / {
     behaviors {
-        td_low_bspc: tap_dance_mod_tap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <170>;
-            bindings = <&lt 1 BSPC>, <&kp BSPC>;
+        tdx: tap_dance_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+			quick-tap-ms = <160>;
+			flavor = "tap-preferred";
+            bindings = <&lt>, <&kp>;
         };
     };
 
