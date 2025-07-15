@@ -1,0 +1,44 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+            encoders {
+                compatible = "zmk,encoders";
+                status = "okay";
+
+                // 左旋钮 (左右方向键)
+                encoder_left: encoder_left {
+                    compatible = "alps,ec11";
+                    a-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                    b-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                    steps = <15>;
+                };
+
+                // 右旋钮 (上下方向键)
+                encoder_right: encoder_right {
+                    compatible = "alps,ec11";
+                    a-gpios = <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                    b-gpios = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                    steps = <15>;
+                };
+            };
+        };
+    };
+
+    fragment@1 {
+        target-path = "/chosen";
+        __overlay__ {
+            zmk,encoder-left = <&encoder_left>;
+            zmk,encoder-right = <&encoder_right>;
+            zmk,encoder-map-left = <
+                &inc_dec_kp LEFT RIGHT  // 左旋钮: ←/→
+            >;
+            zmk,encoder-map-right = <
+                &inc_dec_kp UP DOWN    // 右旋钮: ↑/↓
+            >;
+        };
+    };
+};
