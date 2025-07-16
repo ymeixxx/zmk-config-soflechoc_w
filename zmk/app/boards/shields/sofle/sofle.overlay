@@ -1,0 +1,46 @@
+/ {
+    encoders {
+        compatible = "zmk,encoders";
+        
+        // 左旋钮 - 尝试不同GPIO组合
+        left_encoder: encoder_left {
+            compatible = "alps,ec11";
+            // 组合1 (默认)
+            a-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            b-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            
+            // 如果不行，尝试组合2
+            // a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            // b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            
+            steps = <15>;
+            status = "okay";
+        };
+
+        // 右旋钮 - 尝试不同GPIO组合
+        right_encoder: encoder_right {
+            compatible = "alps,ec11";
+            // 组合1 (默认)
+            a-gpios = <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            b-gpios = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            
+            // 如果不行，尝试组合2
+            // a-gpios = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            // b-gpios = <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            
+            steps = <15>;
+            status = "okay";
+        };
+    };
+
+    chosen {
+        zmk,encoder-left = <&left_encoder>;
+        zmk,encoder-right = <&right_encoder>;
+        zmk,encoder-map-left = <
+            &inc_dec_kp LEFT RIGHT
+        >;
+        zmk,encoder-map-right = <
+            &inc_dec_kp UP DOWN
+        >;
+    };
+};
