@@ -57,6 +57,21 @@
             bindings = <&kp LA(LC(N3))>;
             label = "SHOW_WSL3";
         };
+
+        layer_alt_tab: layer_alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_ALT>,
+                <&macro_press>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&macro_pause_for_release>;
+
+            label = "LAYER_ALT_TAB";
+            wait-ms = <10>;
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -91,11 +106,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp F13           &kp F1     &kp F2             &kp F3    &kp F4     &kp F5                                   &kp F6       &kp F7         &kp F8        &kp F9     &kp F10   &kp F11
-&kp GRAVE         &kp N1     &kp N2             &kp N3    &kp N4     &kp N5                                   &kp N6       &kp N7         &kp N8        &kp N9     &kp N0    &kp F12
-&trans            &kp EXCL   &kp AT             &kp HASH  &kp DLLR   &kp PRCNT                                &kp CARET    &kp AMPS       &kp ASTERISK  &kp LPAR   &kp RPAR  &kp PIPE
-&kp LC(NUMBER_1)  &kp EQUAL  &kp MINUS          &kp PLUS  &kp LBRC   &kp RBRC   &kp UNDER    &trans           &kp LBKT     &kp RBKT       &kp SEMI      &kp COLON  &kp BSLH  &trans
-                             &kp LC(LA(LS(D)))  &show_wx  &show_wxe  &trans     &kp LG(L)    &kp LA(LS(TAB))  &kp LA(TAB)  &kp LA(LG(A))  &trans        &trans
+&kp F13           &kp F1     &kp F2             &kp F3    &kp F4     &kp F5                                   &kp F6          &kp F7         &kp F8        &kp F9     &kp F10   &kp F11
+&kp GRAVE         &kp N1     &kp N2             &kp N3    &kp N4     &kp N5                                   &kp N6          &kp N7         &kp N8        &kp N9     &kp N0    &kp F12
+&trans            &kp EXCL   &kp AT             &kp HASH  &kp DLLR   &kp PRCNT                                &kp CARET       &kp AMPS       &kp ASTERISK  &kp LPAR   &kp RPAR  &kp PIPE
+&kp LC(NUMBER_1)  &kp EQUAL  &kp MINUS          &kp PLUS  &kp LBRC   &kp RBRC   &kp UNDER    &trans           &kp LBKT        &kp RBKT       &kp SEMI      &kp COLON  &kp BSLH  &trans
+                             &kp LC(LA(LS(D)))  &show_wx  &show_wxe  &trans     &kp LG(L)    &kp LA(LS(TAB))  &layer_alt_tab  &kp LA(LG(A))  &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
