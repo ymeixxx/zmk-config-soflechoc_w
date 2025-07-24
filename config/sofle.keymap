@@ -171,7 +171,7 @@
 
         number_pad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp FSLH   &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &kp BSPC   &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                       &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PRCNT  &trans
 &trans  &trans  &trans  &trans  &trans  &kp LC(G)                    &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
