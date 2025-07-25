@@ -4,29 +4,27 @@
 #include <dt-bindings/zmk/encoder.h>
 
 / {
-  encoders {
-    compatible = "zmk,encoders";
-    // 左侧编码器配置
-    left_encoder: left_encoder {
-      compatible = "alps,ec11";
-      a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.17 (D2)
-      b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.20 (D3)
-      steps = <4>;
+    encoders {
+        compatible = "zmk,encoders";
+        // 左侧编码器配置
+        left_encoder: left_encoder {
+            compatible = "alps,ec11";
+            a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.17 (D2)
+            b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.20 (D3)
+            steps = <4>;
+        };
+        
+        // 右侧编码器配置
+        right_encoder: right_encoder {
+            compatible = "alps,ec11";
+            a-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.31 (D21)
+            b-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.29 (D20)
+            steps = <4>;
+        };
     };
-    
-    // 右侧编码器配置
-    right_encoder: right_encoder {
-      compatible = "alps,ec11";
-      a-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.31 (D21)
-      b-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.29 (D20)
-      steps = <4>;
-    };
-  };
 
-  chosen {
-    zmk,encoder-left = <&left_encoder>;
-    zmk,encoder-right = <&right_encoder>;
-    zmk,encoder-map-left = < &inc_dec_kp LEFT RIGHT >;
-    zmk,encoder-map-right = < &inc_dec_kp UP DOWN >; // 根据需求自定义
-  };
+    chosen {
+        zmk,encoder-left = <&left_encoder>;
+        zmk,encoder-right = <&right_encoder>;
+    };
 };
