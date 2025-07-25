@@ -17,8 +17,8 @@
     // 右侧编码器配置
     right_encoder: right_encoder {
       compatible = "alps,ec11";
-      a-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.31 (D21)
-      b-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.29 (D20)
+      a-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.31 (D21)
+      b-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.29 (D20)
       steps = <4>;
     };
   };
