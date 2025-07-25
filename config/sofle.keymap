@@ -147,7 +147,9 @@
                              &kp LC(LA(LS(D)))  &trans    &show_wxe  &trans     &kp LG(L)    &kp LA(LG(E))  &swapper   &kp LA(LG(A))  &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp LEFT RIGHT>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
