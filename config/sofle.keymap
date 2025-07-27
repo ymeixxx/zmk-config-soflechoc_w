@@ -128,6 +128,7 @@
             >;
 
             // 修改左旋钮为左右方向键，右旋钮保持翻页功能
+
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp RIGHT LEFT>;
         };
 
@@ -149,6 +150,7 @@
             >;
 
             // 修改左旋钮为左右方向键，右旋钮保持翻页功能
+
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_DN PG_UP>;
         };
 
@@ -169,16 +171,17 @@
             >;
 
             // 修改左旋钮为左右方向键，右旋钮保持翻页功能
+
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         number_pad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp BSPC   &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PRCNT  &trans
-&trans  &trans  &trans  &trans  &trans  &kp LC(G)                    &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans  &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
-                &trans  &trans  &trans  &trans     &trans    &trans  &trans     &kp N0        &kp DOT       &kp KP_ENTER
+&trans         &trans  &trans  &trans  &trans  &trans                       &kp BSPC   &kp AMPS      &kp STAR      &kp LPAR      &kp RPAR   &trans
+&trans         &trans  &trans  &trans  &trans  &trans                       &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PRCNT  &trans
+&kp LA(LC(A))  &trans  &trans  &trans  &trans  &kp LC(G)                    &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans     &trans
+&trans         &trans  &trans  &trans  &trans  &trans     &trans    &trans  &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
+                       &trans  &trans  &trans  &trans     &trans    &trans  &trans     &kp N0        &kp DOT       &kp KP_ENTER
             >;
         };
     };
