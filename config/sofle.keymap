@@ -183,6 +183,12 @@
 &trans  &trans         &trans  &trans  &trans  &trans     &trans    &trans  &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
                        &trans  &trans  &trans  &trans     &trans    &trans  &trans     &kp N0        &kp DOT       &kp KP_ENTER
             >;
+
+            // 修改左旋钮为左右方向键，右旋钮保持翻页功能
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LS(LC(TAB))>;
+
+
         };
     };
 };
