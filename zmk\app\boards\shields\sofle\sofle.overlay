@@ -6,12 +6,13 @@
 / {
     encoders {
         compatible = "zmk,encoders";
-        // 左侧编码器配置
+        // 左侧编码器配置（检查引脚是否与PCB匹配）
         left_encoder: left_encoder {
             compatible = "alps,ec11";
             a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.17 (D2)
             b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.20 (D3)
             steps = <4>;
+            status = "okay";  // 明确启用
         };
         
         // 右侧编码器配置
@@ -20,6 +21,7 @@
             a-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.31 (D21)
             b-gpios = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  // P0.29 (D20)
             steps = <4>;
+            status = "okay";
         };
     };
 
