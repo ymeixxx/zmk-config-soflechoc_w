@@ -163,11 +163,11 @@
             //              |      |       |       |      |      |  |      |      | HOME |  END  |      |
 
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 4  &trans     &trans       &trans       &bt BT_CLR_ALL                           &trans     &trans      &trans      &trans      &trans    &trans
-&bt BT_SEL 1  &trans        &kp PSCRN  &kp K_CMENU  &trans       &bt BT_CLR                               &trans     &kp PG_UP   &kp UP      &kp PG_DN   &trans    &trans
-&bt BT_SEL 2  &trans        &trans     &trans       &trans       &trans                                   &kp UNDER  &kp LEFT    &kp DOWN    &kp RIGHT   &kp BSPC  &kp DEL
-&bt BT_SEL 3  &kp K_UNDO    &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans          &trans           &kp F6  &kp F7     &kp HOME    &kp END     &kp INSERT  &trans    &trans
-                            &trans     &trans       &trans       &kp LA(LG(B))   &kp LA(LG(C))    &trans  &trans     &show_wsl1  &show_wsl2  &show_wsl3
+&bt BT_SEL 0  &trans      &trans     &trans       &trans       &bt BT_CLR_ALL                           &trans     &trans      &trans      &trans      &trans    &trans
+&bt BT_SEL 1  &trans      &kp PSCRN  &kp K_CMENU  &trans       &bt BT_CLR                               &trans     &kp PG_UP   &kp UP      &kp PG_DN   &trans    &trans
+&bt BT_SEL 2  &trans      &trans     &trans       &trans       &trans                                   &kp UNDER  &kp LEFT    &kp DOWN    &kp RIGHT   &kp BSPC  &kp DEL
+&trans        &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans          &trans           &kp F6  &kp F7     &kp HOME    &kp END     &kp INSERT  &trans    &trans
+                          &trans     &trans       &trans       &kp LA(LG(B))   &kp LA(LG(C))    &trans  &trans     &show_wsl1  &show_wsl2  &show_wsl3
             >;
 
             // 修改左旋钮为左右方向键，右旋钮保持翻页功能
