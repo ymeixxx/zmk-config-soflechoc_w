@@ -151,7 +151,7 @@
 
             // 修改左旋钮为左右方向键，右旋钮保持翻页功能
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp LC(TAB) LS(LC(TAB))>;
         };
 
         raise_layer {
@@ -171,8 +171,7 @@
             >;
 
             // 修改左旋钮为左右方向键，右旋钮保持翻页功能
-
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>, <&inc_dec_kp F24 F23>;
+            sensor-bindings = <&inc_dec_kp F24 F23 &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         number_pad {
